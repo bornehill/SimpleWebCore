@@ -27,4 +27,8 @@
     <TypeScriptCompile Include="wwwroot\ts\main.ts" />
     <TypeScriptCompile Include="wwwroot\ts\storecustomer.ts" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\ClientApp\" />
+  </ItemGroup>
 </Project>
