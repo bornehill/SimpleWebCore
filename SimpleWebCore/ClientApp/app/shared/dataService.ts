@@ -1,15 +1,21 @@
-﻿
+﻿import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
+@Injectable()
 export class DataService {
-    public products = [{
-        title: "First product",
-        price: 18.90
-    },
-    {
-        title: "Second product",
-        price: 12.45
-    },
-    {
-        title: "Third product",
-        price: 2.5
-    }];
+
+    constructor(private http: HttpClient) {
+    }
+
+    public products = [];
+
+    loadProducts() {
+        return this.http.get("/api/products")
+            .map((data: any[]) => {
+                this.products = data;
+                return true;
+            });
+    }
 }
