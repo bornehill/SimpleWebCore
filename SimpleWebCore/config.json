@@ -1,0 +1,18 @@
+﻿{
+  "ConnectionStrings": {
+    "SimpleWebCoreConnection": "server=LENOVO-PC\\BORNE;Database=SimpleWebCore;Integrated Security=true;MultipleActiveResultSets=true;" 
+
+  },
+  "Logging": {
+    "LogLevel": {
+      //"Default": "Warning",
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
+  },
+  "Tokens": {
+    "Key": "asdjdalksjdalkjasldlklk",
+    "Issuer": "localhost",
+    "Audience": "api"
+  }
+}

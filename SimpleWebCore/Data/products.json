@@ -1,0 +1,44 @@
+﻿[
+  {
+    "Id": 0,
+    "ArtDating": "",
+    "ArtDescription": "Girl",
+    "ArtId": "12",
+    "Artist": "VanGoh",
+    "ArtistBirthDate": "01/01/1980",
+    "ArtistDeathDate": "01/01/2010",
+    "ArtistNationality": "Turkin",
+    "Category": "Selfies",
+    "Price": 1200,
+    "Size": "12x34x10",
+    "Title": "Coffe girl"
+  },
+  {
+    "Id": 0,
+    "ArtDating": "",
+    "ArtDescription": "Tree",
+    "ArtId": "12",
+    "Artist": "VanGoh",
+    "ArtistBirthDate": "01/01/1980",
+    "ArtistDeathDate": "01/01/2010",
+    "ArtistNationality": "Turkin",
+    "Category": "Selfies",
+    "Price": 1800,
+    "Size": "12x34x10",
+    "Title": "Tree green"
+  },
+  {
+    "Id": 0,
+    "ArtDating": "",
+    "ArtDescription": "Sea",
+    "ArtId": "12",
+    "Artist": "VanGoh",
+    "ArtistBirthDate": "01/01/1980",
+    "ArtistDeathDate": "01/01/2010",
+    "ArtistNationality": "Turkin",
+    "Category": "Selfies",
+    "Price": 2100,
+    "Size": "12x34x10",
+    "Title": "Sea blue"
+  }
+]

@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Home page";
+}
+
+@*Is not necesary for Layout file*@
+@*<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Simple Web site: @ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>*@
+<div class="row">
+    <div class="col-md-6">
+        <p>Place where you can <strong>buy</strong> <a>pictures</a></p>
+        <div class="product-info">
+            <img class="col-md-6" src="~/img/city.jpg" />
+            <h3>City</h3>
+            <ul class="product-props">
+                <li>Price: $5000</li>
+                <li>Artist: Someone</li>
+                <li>Title: City</li>
+                <li>Description: City picture night</li>
+            </ul>
+            <button id="buyButton">Buy</button>
+        </div>
+        <div>
+            <div id="loginToggle">Login</div>
+            <form class="popup-form">
+                <div>
+                    <label>UserName</label>
+                    <input />
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" />
+                </div>
+                <div>
+                    <input type="checkbox" />
+                    <label>Remember Me?</label>
+                </div>
+                <div>
+                    <input type="submit" value="Login" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    @*Is not necesary for Layout file*@
+    @*<script src="~/lib/Jquery/dist/jquery.min.js"></script>
+            <script src="~/js/index.js"></script>
+        </body>
+        </html>*@

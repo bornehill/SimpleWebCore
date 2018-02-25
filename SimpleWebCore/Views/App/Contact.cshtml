@@ -1,0 +1,41 @@
+﻿@model ContactViewModel
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+<p>Here you can contact us</p>
+<div id="frmBuy">
+    <div asp-validation-summary="ModelOnly"></div>
+    <form method="post">
+        @*<label>Your Name:</label>*@
+        <label asp-for="Name">Your Name:</label>
+        <br />
+        @*<input name="name" />*@
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+        <br />
+        @*<label>Email:</label>*@
+        <label asp-for="Email">Email:</label>
+        <br />
+        @*<input type="email" name="email" />*@
+        <input type="email" asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+        <br />
+        @*<label>Subject:</label>*@
+        <label asp-for="Subject">Subject:</label>
+        <br />
+        @*<input type="text" name="subject" />*@
+        <input type="text" asp-for="Subject" />
+        <span asp-validation-for="Subject"></span>
+        <br />
+        @*<label>Message:</label>*@
+        <label asp-for="Message">Message:</label>
+        <br />
+        @*<textarea rows="4" name="message"></textarea>*@
+        <textarea rows="4" asp-for="Message"></textarea>
+        <span asp-validation-for="Message"></span>
+        <br />
+        <input type="submit" value="Send message" />
+        <div class="text-success">@ViewBag.UserMessage</div>
+    </form>
+</div>
