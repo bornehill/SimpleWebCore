@@ -9,10 +9,12 @@ import { DataService } from './shared/dataService';
 import { Shop } from './shop/shop.component';
 import { Checkout } from './checkout/checkout.component';
 import { RouterModule } from "@angular/router";
+import { Login } from "./login/login.component";
 
 let routes = [
     { path: "", component: Shop },
-    { path: "checkout", component: Checkout }
+    { path: "checkout", component: Checkout },
+    { path: "login", component: Login }
 ];
 
 @NgModule({
@@ -21,7 +23,8 @@ let routes = [
       ProductList,
       Cart,
       Shop,
-      Checkout
+      Checkout,
+      Login
   ],
   imports: [
       BrowserModule,

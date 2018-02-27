@@ -11,9 +11,16 @@ export class DataService {
     constructor(private http: HttpClient) {
     }
 
+    public token: string = "";
+    public tokenExpiration: Date;
+
     public order: Order = new Order();
 
     public products: Product[] = [];
+
+    public get loginRequired(): boolean {
+        return this.token.length == 0 || this.tokenExpiration > new Date();
+    }
 
     public loadProducts(): Observable<Product[]> {
         return this.http.get<Product[]>("/api/products");
