@@ -47,6 +47,16 @@ export class DataService {
 
     }
 
+    public login(credentials) {
+        return this.http.post("/account/createtoken", credentials)
+            .map(response => {
+                let tokenInfo = response.json();
+                this.token = tokenInfo.token;
+                this.tokenExpiration = tokenInfo.expiration;
+                return true;
+            });
+    }
+
     //public loadProducts(): Observable<Product[]> {
     //    return this.http.get("/api/products")
     //        .map((result: Response) => {
