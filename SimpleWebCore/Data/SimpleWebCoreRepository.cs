@@ -54,5 +54,13 @@ namespace SimpleWebCore.Data
         {
             return _ctx.SaveChanges()>0 ;
         }
+
+        public void AddOrder(Order newOrder)
+        {
+            foreach (var item in newOrder.Items) {
+                item.Product = _ctx.Products.Find(item.Product.Id);
+            }
+            AddEntity(newOrder);
+        }
     }
 }

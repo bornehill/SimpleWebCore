@@ -11,5 +11,6 @@ namespace SimpleWebCore.Data
         Order GetOrderById(int Id);
         void AddEntity(object model);
         bool SaveAll();
+        void AddOrder(Order newOrder);
     }
 }

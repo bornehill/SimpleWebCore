@@ -18,7 +18,9 @@ export class ProductList implements OnInit {
 
     ngOnInit(): void {
         this.data.loadProducts()
-            .subscribe((result: Product[]) => this.products = result);
+            .subscribe((result: Product[]) => {
+                this.products = result;
+            });
     }
 
     public addProduct(product: Product) {

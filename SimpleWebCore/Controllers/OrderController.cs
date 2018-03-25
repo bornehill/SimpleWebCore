@@ -79,7 +79,7 @@ namespace SimpleWebCore.Controllers
                     _repository.AddEntity(order);
                     if (_repository.SaveAll()) {
                         model.OrderId = order.Id;
-                        return Created($"/api/orders/{model.OrderId}", model);
+                        return Created($"/api/order/{model.OrderId}", model);
                     }
                 }
                 else {

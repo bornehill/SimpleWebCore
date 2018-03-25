@@ -1,9 +1,10 @@
-﻿import { HttpClient } from "@angular/common/http";
+﻿import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import { Product } from "../shared/product";
 import { Order, OrderItem } from "../shared/order";
+import { TokenResponse } from "../shared/tokenResponse";
 
 @Injectable()
 export class DataService {
@@ -50,9 +51,22 @@ export class DataService {
     public login(credentials) {
         return this.http.post("/account/createtoken", credentials)
             .map(response => {
-                let tokenInfo = response.json();
-                this.token = tokenInfo.token;
-                this.tokenExpiration = tokenInfo.expiration;
+                let tokenResponse: any = response;
+                this.token = tokenResponse.token;
+                this.tokenExpiration = tokenResponse.expiration;
+                return true;
+            });
+    }
+
+    public checkout() {
+        if (!this.order.orderNumber) {
+            this.order.orderNumber = this.order.orderDate.getFullYear().toString() + this.order.orderDate.getTime().toString();
+        }
+        return this.http.post("/api/order", this.order, {
+            headers: new HttpHeaders({ "Authorization": "Bearer " + this.token})
+        })
+            .map(response => {
+                this.order = new Order();
                 return true;
             });
     }
